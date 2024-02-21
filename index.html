@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferie</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+<body>
+    <div class="head">
+        <h1>Ferie</h1>
+    </div>
+    <div class="container">
+        <div class="main" id="snow_fall">
+            <div class="ferie">
+            </div>
+            <div class="zdjecia">
+            </div>
+            <script src="particles.js"></script>
+            <script src="app.js"></script>
+        </div>
+        <div class="side">
+            <p>Ferie zimowe 2024</p>
+            <p>29.01-12.02</p>
+            <br>
+            <p>w te ferie nie zrobiłem nic pożytecznego ale za to dobrze spędziłem czas</p>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="visit" id="visit">
+            <script>
+                var n = localStorage.getItem('on_load_counter');
+
+                if (n === null) {
+                  n = 0;
+                }
+                n++;
+                
+                localStorage.setItem("on_load_counter", n);
+                
+                nums = n.toString().split('').map(Number);
+                document.getElementById('visit').innerHTML = 'ilosc odwiedzin: ';
+                for (var i of nums) {
+                  document.getElementById('visit').innerHTML += '<span class="counter-item">' + i + '</span>';
+                }
+                </script>
+        </div>
+    </div>
+</body>
+</html>
